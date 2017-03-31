@@ -1,8 +1,10 @@
+#CentOS 7.3.1611 x64
+
 yum update
 yum install glibc.i686 libstdc++.i686 screen bzip2 -y
 adduser csgo
 su csgo
-cd ~
+cd ..
 mkdir csgo
 cd csgo
 wget https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz
@@ -14,7 +16,7 @@ force_install_dir ./csgoserver
 app_update 740 validate
 quit
 su root
-cd ~
+cd
 mdkir shortcuts
 cd shortcuts
 wget https://cdn.rawgit.com/sourcemodplugins/smplugins/d404ce31/editstart
@@ -55,7 +57,7 @@ tar xvzf retakes*
 rm 1v1*
 rm retakes*
 
-cd ~
+cd
 wget https://docs.google.com/uc?id=0B3X9GlR6EmbnQ0FtZmJJUXEyRTA&export=download
 mv uc* gdrive
 chmod +x gdrive
@@ -65,3 +67,5 @@ wget http://dl.4players.de/ts/releases/3.0.13.6/teamspeak3-server_linux_amd64-3.
 tar xvzf teamspeak*
 rm teamspeak3-server_linux_amd64*
 mv teamspeak3-server_linux ts3
+
+echo 'CS:GO Server Installation Complete!"
