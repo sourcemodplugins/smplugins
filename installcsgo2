@@ -1,0 +1,71 @@
+#CentOS 7.3.1611 x64
+
+yum update
+yum install glibc.i686 libstdc++.i686 screen bzip2 -y
+adduser csgo
+su csgo
+cd ..
+mkdir csgo
+cd csgo
+wget https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz
+tar xvzf steamcmd_linux.tar.gz 
+rm steamcmd_linux.tar.gz
+./steamcmd.sh
+login _agamemnon__
+force_install_dir ./csgoserver
+app_update 740 validate
+quit
+su root
+cd
+mdkir shortcuts
+cd shortcuts
+wget https://cdn.rawgit.com/sourcemodplugins/smplugins/d404ce31/editstart
+wget https://cdn.rawgit.com/sourcemodplugins/smplugins/d404ce31/maps
+wget https://cdn.rawgit.com/sourcemodplugins/smplugins/d404ce31/plugins
+wget https://cdn.rawgit.com/sourcemodplugins/smplugins/d404ce31/root
+wget https://cdn.rawgit.com/sourcemodplugins/smplugins/d404ce31/start
+. root
+wget https://cdn.rawgit.com/sourcemodplugins/smplugins/d404ce31/sourcemod-1.8.0-git5981-linux.tar.gz
+wget http://www.gsptalk.com/mirror/sourcemod/mmsource-1.10.6-linux.tar.gz
+tar xvzf sourcemod*
+tar xvzf mmsource*
+rm sourcemod*
+rm mmsource*
+cd addons
+rm metamod.vdf
+wget https://cdn.rawgit.com/sourcemodplugins/smplugins/e507fbd1/metamod.vdf
+cd sourcemod/configs
+wget https://cdn.rawgit.com/sourcemodplugins/smplugins/e507fbd1/admins_simple.ini
+cd ~
+cd . shortcuts/root
+cd cfg
+wget https://cdn.rawgit.com/sourcemodplugins/smplugins/cadc913f/gamemode_custom.cfg
+wget https://cdn.rawgit.com/sourcemodplugins/smplugins/e507fbd1/practice.cfg
+wget https://cdn.rawgit.com/sourcemodplugins/smplugins/e507fbd1/server.cfg
+cd ..
+cd ..
+wget https://cdn.rawgit.com/sourcemodplugins/smplugins/cadc913f/start.sh
+wget https://cdn.rawgit.com/sourcemodplugins/smplugins/cadc913f/start-debug-mode.sh
+cd csgo/addons/sourcemod/plugins
+wget https://cdn.rawgit.com/sourcemodplugins/smplugins/cadc913f/NadeTails.smx
+cd ~
+. shortcuts/root
+wget https://cdn.rawgit.com/sourcemodplugins/smplugins/cadc913f/1v1.tar.gz
+wget https://cdn.rawgit.com/sourcemodplugins/smplugins/cadc913f/retakes.tar.gz
+tar xvzf 1v1*
+tar xvzf retakes*
+rm 1v1*
+rm retakes*
+
+cd
+wget https://docs.google.com/uc?id=0B3X9GlR6EmbnQ0FtZmJJUXEyRTA&export=download
+mv uc* gdrive
+chmod +x gdrive
+install gdrive /usr/local/bin/gdrive
+
+wget http://dl.4players.de/ts/releases/3.0.13.6/teamspeak3-server_linux_amd64-3.0.13.6.tar.bz2
+tar xvzf teamspeak*
+rm teamspeak3-server_linux_amd64*
+mv teamspeak3-server_linux ts3
+
+echo 'CS:GO Server Installation Complete!"
