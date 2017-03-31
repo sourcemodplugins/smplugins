@@ -1,8 +1,8 @@
 #CentOS 7.3.1611 x64
-
+set -e
 yum update
 yum install glibc.i686 libstdc++.i686 screen bzip2 -y
-adduser csgo
+userdel -r -f csgo
 su csgo
 cd ..
 mkdir csgo
